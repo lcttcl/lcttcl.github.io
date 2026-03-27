@@ -1,13 +1,164 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>个人主页</title>
+  <title>Changtai Li – Short Résumé</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>你好，我是XXX</h1>
-  <p>这是我的 GitHub 个人主页。</p>
-  <p>这里可以放个人简介、项目、简历、联系方式。</p>
+  <main class="page">
+
+    <!-- ── Header ── -->
+    <header class="header">
+      <div class="header-inner">
+        <div class="header-text">
+          <h1>Changtai Li</h1>
+          <p class="subtitle">Short Résumé</p>
+        </div>
+        <div class="avatar-wrap">
+          <img class="avatar" src="avatar.jpg" alt="Changtai Li"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="avatar-placeholder" aria-hidden="true">CL</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ── Personal Data ── -->
+    <section class="section">
+      <h2 class="section-title">Personal Data</h2>
+      <div class="data-grid">
+        <span class="data-label">Name</span>
+        <span class="data-value">Changtai Li</span>
+
+        <span class="data-label">Email</span>
+        <span class="data-value">
+          <a href="mailto:lichangtai17@gmail.com">lichangtai17@gmail.com</a>
+        </span>
+
+        <span class="data-label">ORCID</span>
+        <span class="data-value">
+          <a href="https://orcid.org/0000-0001-7985-9704" target="_blank" rel="noopener">
+            0000-0001-7985-9704
+          </a>
+        </span>
+      </div>
+    </section>
+
+    <!-- ── Education ── -->
+    <section class="section">
+      <h2 class="section-title">Scientific Education</h2>
+      <div class="timeline">
+
+        <div class="timeline-entry">
+          <div class="tl-period">09/2021 – Current</div>
+          <div class="tl-degree">PhD Candidate in Computer Science <span style="font-weight:300;font-size:.9rem;">(Joint-PhD Program)</span></div>
+          <div class="tl-institution">University of Groningen, Groningen, the Netherlands</div>
+          <div class="tl-dept">Bernoulli Institute for Mathematics, Computer Science and Artificial Intelligence</div>
+          <div class="tl-institution" style="margin-top:.35rem;">University of Science and Technology Beijing, Beijing, China</div>
+          <div class="tl-dept">School of Intelligence Science and Technology</div>
+        </div>
+
+        <div class="timeline-entry">
+          <div class="tl-period">09/2017 – 07/2021</div>
+          <div class="tl-degree">Bachelor of Engineering in Computer Science</div>
+          <div class="tl-institution">University of Science and Technology Beijing, Beijing, China</div>
+          <div class="tl-dept">School of Computer and Communication Engineering</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── Publications ── -->
+    <section class="section">
+      <h2 class="section-title">Selected Publications</h2>
+      <ul class="pub-list">
+
+        <!-- 2025 · 1st author -->
+        <li class="pub-item">
+          <div class="pub-authors">
+            <strong>C.&nbsp;Li<sup>†</sup></strong>, X.&nbsp;Han<sup>†</sup>, C.&nbsp;Yao, Y.&nbsp;Guo, Z.&nbsp;Li, L.&nbsp;Jiang, W.&nbsp;Liu, H.&nbsp;Huang, H.&nbsp;Fu<sup>*</sup>, and X.&nbsp;Ban<sup>*</sup>
+          </div>
+          <div class="pub-title">A novel training-free approach to efficiently extracting material microstructures via visual large model</div>
+          <div class="pub-venue"><em>Acta Materialia</em>, Volume 290, 120962. Elsevier, 2025.</div>
+          <div class="pub-doi">
+            <a href="https://doi.org/10.1016/j.actamat.2025.120962" target="_blank" rel="noopener">
+              doi: 10.1016/j.actamat.2025.120962
+            </a>
+          </div>
+        </li>
+
+        <!-- 2024 · 1st author -->
+        <li class="pub-item">
+          <div class="pub-authors">
+            <strong>C.&nbsp;Li<sup>†</sup></strong>, R.&nbsp;Jiang<sup>†</sup>, H.&nbsp;Wang, W.&nbsp;Xue, Y.&nbsp;Guo, and X.&nbsp;Ban<sup>*</sup>
+          </div>
+          <div class="pub-title">DeepMMP: Efficient 3D perception of microstructures from serial section microscopic images</div>
+          <div class="pub-venue"><em>Computational Materials Science</em>, Volume 235, 112826. Elsevier, 2024.</div>
+          <div class="pub-doi">
+            <a href="https://doi.org/10.1016/j.commatsci.2024.112826" target="_blank" rel="noopener">
+              doi: 10.1016/j.commatsci.2024.112826
+            </a>
+          </div>
+        </li>
+
+        <!-- 2024 · 2nd author -->
+        <li class="pub-item">
+          <div class="pub-authors">
+            R.&nbsp;Jiang<sup>†</sup>, <strong>C.&nbsp;Li<sup>†</sup></strong>, X.&nbsp;Ban<sup>*</sup>, S.&nbsp;Yin, C.&nbsp;Yao, Y.&nbsp;Guo, and M.&nbsp;S.&nbsp;Obaidat
+          </div>
+          <div class="pub-title">From non-expert to expert: Recurrent refined learning for medical image segmentation</div>
+          <div class="pub-venue"><em>2024 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)</em>, pp. 2086–2093. IEEE, 2024.</div>
+          <div class="pub-doi">
+            <a href="https://doi.org/10.1109/BIBM62325.2024.10821757" target="_blank" rel="noopener">
+              doi: 10.1109/BIBM62325.2024.10821757
+            </a>
+          </div>
+        </li>
+
+        <!-- 2023 · 1st author -->
+        <li class="pub-item">
+          <div class="pub-authors">
+            <strong>C.&nbsp;Li<sup>†</sup></strong>, R.&nbsp;Jiang<sup>†</sup>, S.&nbsp;Yin, J.&nbsp;Yang, and X.&nbsp;Ban<sup>*</sup>
+          </div>
+          <div class="pub-title">Self-supervised rotation learning for 3D segmentation on nasopharyngeal carcinoma MRI images</div>
+          <div class="pub-venue"><em>2023 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)</em>, pp. 3529–3534. IEEE, 2023.</div>
+          <div class="pub-doi">
+            <a href="https://doi.org/10.1109/BIBM58861.2023.10385483" target="_blank" rel="noopener">
+              doi: 10.1109/BIBM58861.2023.10385483
+            </a>
+          </div>
+        </li>
+
+        <!-- 2022 · 4th author -->
+        <li class="pub-item">
+          <div class="pub-authors">
+            B.&nbsp;Zhang, Q.&nbsp;Zhu, C.&nbsp;Xu, <strong>C.&nbsp;Li</strong>, Y.&nbsp;Ma, Z.&nbsp;Ma, S.&nbsp;Liu, R.&nbsp;Shao, Y.&nbsp;Xu, B.&nbsp;Jiang, L.&nbsp;Gao, X.&nbsp;Pang, Y.&nbsp;He<sup>*</sup>, G.&nbsp;Chen<sup>*</sup>, and L.&nbsp;Qiao<sup>*</sup>
+          </div>
+          <div class="pub-title">Atomic-scale insights on hydrogen trapping and exclusion at incoherent interfaces of nanoprecipitates in martensitic steels</div>
+          <div class="pub-venue"><em>Nature Communications</em>, Volume 13, 3858. Nature Publishing Group, 2022.</div>
+          <div class="pub-doi">
+            <a href="https://doi.org/10.1038/s41467-022-31665-x" target="_blank" rel="noopener">
+              doi: 10.1038/s41467-022-31665-x
+            </a>
+          </div>
+        </li>
+
+      </ul>
+
+      <div class="footnote">
+        <span><sup>†</sup> Equal contribution</span>
+        <span><sup>*</sup> Corresponding author</span>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      Changtai Li &nbsp;·&nbsp; lcttcl.github.io
+    </footer>
+
+  </main>
 </body>
 </html>
