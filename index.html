@@ -36,10 +36,19 @@
             </div>
           </div>
         </div>
-        <div class="avatar-wrap">
-          <img class="avatar" src="avatar.jpg" alt="Changtai Li"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="avatar-placeholder" aria-hidden="true">CL</div>
+        <div class="avatar-wrap" id="avatarWrap" title="Click to flip">
+          <div class="avatar-flipper">
+            <div class="avatar-face avatar-front">
+              <img class="avatar" src="avatar.jpg" alt="Changtai Li"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+              <div class="avatar-placeholder" aria-hidden="true">CL</div>
+            </div>
+            <div class="avatar-face avatar-back">
+              <img class="avatar" src="avatar2.jpg" alt="Changtai Li"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+              <div class="avatar-placeholder" aria-hidden="true">CL</div>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -173,5 +182,10 @@
     </footer>
 
   </main>
+  <script>
+    document.getElementById('avatarWrap').addEventListener('click', function () {
+      this.classList.toggle('flipped');
+    });
+  </script>
 </body>
 </html>

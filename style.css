@@ -32,6 +32,33 @@ body {
 /* ── Avatar ── */
 .avatar-wrap {
   flex-shrink: 0;
+  width: 96px;
+  height: 120px;
+  perspective: 600px;
+  cursor: pointer;
+}
+
+.avatar-flipper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+.avatar-wrap.flipped .avatar-flipper {
+  transform: rotateY(180deg);
+}
+
+.avatar-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.avatar-back {
+  transform: rotateY(180deg);
 }
 
 .avatar {
@@ -41,7 +68,6 @@ body {
   object-fit: cover;
   border: 2px solid var(--rule);
   display: block;
-  margin: 0 auto;
 }
 
 .avatar-placeholder {
@@ -58,7 +84,6 @@ body {
   display: none;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
 }
 
 /* ── Header ── */
