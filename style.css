@@ -89,9 +89,8 @@ body {
 
 /* ── Header ── */
 .header {
-  padding-bottom: 1.8rem;
-  border-bottom: 1.5px solid var(--rule);
-  margin-bottom: 2rem;
+  padding-bottom: 0.85rem;
+  margin-bottom: 0.5rem;
 }
 
 .header-inner {
@@ -129,6 +128,49 @@ body {
   margin-top: 0.3rem;
 }
 
+.header-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1.25rem;
+  margin-top: 0.85rem;
+  max-width: 36rem;
+}
+
+.header-contact-item {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.55rem;
+  font-size: 0.82rem;
+}
+
+.header-contact-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.header-contact-item a {
+  color: var(--ink);
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.header-contact-item a:hover {
+  color: var(--accent);
+}
+
+.header-contact-sep {
+  width: 1px;
+  height: 0.95em;
+  background: var(--rule);
+  align-self: center;
+  opacity: 0.85;
+}
+
 /* ── Section headings ── */
 .section {
   margin-bottom: 2rem;
@@ -154,32 +196,17 @@ body {
   background: var(--rule);
 }
 
-/* ── Personal Data ── */
-.data-grid {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: 0.25rem 1.6rem;
-  font-size: 0.92rem;
-  flex-shrink: 0;
-}
-
-.data-label {
-  font-weight: 500;
-  letter-spacing: 0.06em;
+/* ── Section body text (e.g. under Research interests) ── */
+.section-body {
+  font-size: 0.9rem;
   color: var(--muted);
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  align-self: center;
+  line-height: 1.75;
 }
 
-.data-value a {
+.section-body strong {
   color: var(--ink);
-  text-decoration: underline;
-  text-decoration-color: var(--rule);
-  text-underline-offset: 3px;
-  transition: color .2s;
+  font-weight: 500;
 }
-.data-value a:hover { color: var(--accent); }
 
 .profile-links {
   display: flex;
@@ -355,8 +382,14 @@ body {
 @media (max-width: 520px) {
   .header-inner { flex-direction: column-reverse; align-items: center; text-align: center; }
   .header h1 { font-size: 2.1rem; }
-  .personal-row { flex-direction: column; align-items: flex-start; }
-  .profile-links { padding-left: 0; border-left: none; border-top: 1px solid var(--rule); padding-top: 0.75rem; flex-direction: row; flex-wrap: wrap; }
-  .data-grid { grid-template-columns: 1fr; gap: 0.2rem; }
-  .data-label { margin-top: 0.5rem; }
+  .header-text { width: 100%; }
+  .header-contact {
+    justify-content: center;
+    max-width: none;
+    width: 100%;
+  }
+  .header-contact-item { justify-content: center; text-align: center; }
+  .header-contact-sep { display: none; }
+  .subtitle-row { flex-direction: column; align-items: center; gap: 0.65rem; }
+  .profile-links { padding-left: 0; border-left: none; border-top: 1px solid var(--rule); padding-top: 0.75rem; flex-direction: row; flex-wrap: wrap; justify-content: center; }
 }
