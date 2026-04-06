@@ -29,11 +29,12 @@ body {
   padding: 2.5rem 2rem 6rem;
 }
 
-/* ── Avatar ── */
+/* ── Avatar (portrait 5 : 7) ── */
 .avatar-wrap {
+  --avatar-w: 100px;
   flex-shrink: 0;
-  width: 96px;
-  height: 120px;
+  width: var(--avatar-w);
+  height: calc(var(--avatar-w) * 7 / 5);
   perspective: 600px;
   cursor: pointer;
 }
@@ -62,8 +63,8 @@ body {
 }
 
 .avatar {
-  width: 96px;
-  height: 120px;
+  width: 100%;
+  height: 100%;
   border-radius: 12px;
   object-fit: cover;
   border: 2px solid var(--rule);
@@ -71,8 +72,8 @@ body {
 }
 
 .avatar-placeholder {
-  width: 96px;
-  height: 120px;
+  width: 100%;
+  height: 100%;
   border-radius: 12px;
   border: 2px solid var(--rule);
   background: var(--bg);
@@ -309,6 +310,12 @@ body {
   color: var(--muted);
   font-style: italic;
   margin-bottom: 0.4rem;
+}
+
+.pub-venue strong {
+  font-weight: 600;
+  font-style: italic;
+  color: var(--ink);
 }
 
 .pub-doi a {
